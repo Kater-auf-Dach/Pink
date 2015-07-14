@@ -1,0 +1,143 @@
+.post-preview {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 1px solid $grey;
+
+  @media (min-width: $screen-md) {
+    border-bottom-style: none;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: ($font-size + 1.6);
+    line-height: 1.2;
+
+    @media(min-width: 960px) {
+      font-size: ($font-size + 3.6);
+    }
+
+  }
+
+  &__date {
+    position: relative;
+    padding: 0 20px;
+    @extend .blog-item__date;
+    background-color: $white;
+    z-index: 2;
+
+    @media (min-width: $screen-lg) {
+      order: 3;
+      margin-top: 30px;
+    }
+
+    span {
+      display: inline-block;
+      background-color: #fff;
+      padding: 0 25px;
+    }
+
+    &:after {
+      display: none;
+      content: " ";
+      border-bottom: 2px dotted $grey;
+      position: relative;
+      top: -10px;
+      z-index: -1;
+
+      @media (min-width: $screen-md) {
+        display: block;
+      }
+    }
+  }
+
+  &__text {
+    font-size: ($font-size + 0.2);
+    line-height: 1.7;
+
+    @media(min-width: 480px) {
+      font-size: $font-size--h1;
+    }
+
+    @media(min-width: 960px) {
+      padding: 0 30px;
+      order: 2;
+    }
+  }
+}
+
+.post {
+  padding-top: 45px;
+  padding-bottom: 40px;
+  background-color: $white;
+
+  @media(min-width: 480px) {
+    margin: 0 60px;
+  }
+
+  &__title {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-size: $font-size--big;
+    line-height: 1.7;
+    font-weight: $headings-weight;
+    text-transform: uppercase;
+
+    @media(min-width: 480px) {
+      font-size: $font-size--big + 0.6;
+      line-height: 1.25;
+    }
+
+    &:first-of-type {
+      margin-top: 20px;
+    }
+  }
+
+  &__text {
+    @extend .blog-item__text;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    text-decoration: underline;
+    color: $red;
+  }
+}
+
+.list-post {
+  margin-bottom: 60px;
+
+  &__item {
+    position: relative;
+    padding-left: 35px;
+    @extend .blog-item__text;
+    line-height: 3;
+
+    &:before {
+      position: absolute;
+      top: 40%;
+      left: 0;
+      display: block;
+      content: " ";
+      width: 6px;
+      height: 6px;
+      background: $red;
+      border-radius: 50%;
+    }
+  }
+}
+
+.quote-post {
+  @include item-text;
+  margin-top: 30px;
+  padding-left: 35px;
+  border-left: 2px solid $red;
+
+  &__author {
+    margin-top: 15px;
+    padding-bottom: 0;
+    font-style: italic;
+    color: $grey;
+  }
+}

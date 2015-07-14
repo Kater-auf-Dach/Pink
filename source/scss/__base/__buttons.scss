@@ -1,0 +1,123 @@
+.btn {
+  display: block;
+  width: 100%;
+  font-size: $font-size--big;
+  line-height: 1.67;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    @include border($border-color: $color);
+  }
+
+  &:active {
+    color: $white;
+    background-color: $color;
+  }
+}
+
+.btn--app {
+  margin-bottom: 65px;
+  padding: 15px 0;
+  line-height: 1;
+  font-weight: $headings-weight;
+  text-transform: none;
+  color: $white;
+  @include border(3px, solid, $white, 30px);
+
+  &:hover {
+    @include border(3px, solid, $white, 30px);
+    background-color: $white;
+    color: $red;
+  }
+
+  &:active {
+    @include border(3px, solid, $white, 30px);
+    color: rgba($red, .3);
+  }
+
+  @media (min-width: $screen-lg) {
+    font-size: ($font-size--big + 0.3);
+    line-height: 0.86;
+  }
+}
+
+.minus-plus__btn {
+  display: inline-block;
+  vertical-align: top;
+  width: 60px;
+  padding: 15px 20px;
+  font-size: ($font-size + 0.2);
+  line-height: 1.67;
+  @include border();
+
+  &--plus {
+    background: $white url($dir-img + "icon_plus.png") no-repeat 50% 50%;
+
+    &:active {
+      background: $color url($dir-img + "icon_plus--white.png") no-repeat 50% 50%;
+    }
+  }
+
+  &--minus {
+    background: $white url($dir-img + "icon_minus.png") no-repeat 50% 50%;
+
+    &:active {
+      background: $color url($dir-img + "icon_minus--white.png") no-repeat 50% 50%;
+    }
+  }
+}
+
+.btn--upload {
+  margin-left: 0;
+  margin-bottom: 30px;
+  padding: 15px 25px;
+  color: $black;
+  @include border();
+
+  @media (min-width: $screen-lg) {
+    color: $white;
+    background-color: $red;
+    border-color: $red;
+
+    &:hover {
+      @include border($border-color: darken($red, 5%));
+      background: darken($red, 5%);
+    }
+    &:active {
+      color: rgba(255, 255, 255, .3);
+    }
+  }
+}
+
+
+.btn--submit {
+  padding: 15px 25px;
+  color: $white;
+  background: #2aab6d;
+  @include border($border-color: #2aab6d);
+
+
+  &:hover {
+    @include border($border-color: darken(#2aab6d, 5%));
+    background: darken(#2aab6d, 5%);
+
+  }
+  &:active {
+    color: rgba(255, 255, 255, .3);
+  }
+  &:disabled {
+    @extend %form--disabled;
+  }
+}
+
+.btn--send {
+  margin-bottom: 30px;
+
+  @media (min-width: $screen-md) {
+    width: 300px;
+    float: left;
+  }
+}

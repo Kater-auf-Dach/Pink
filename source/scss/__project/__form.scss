@@ -1,0 +1,347 @@
+.form {
+  padding-top: 35px;
+  background: $white;
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__flex--inner {
+    padding: 0;
+    justify-content: space-between;
+    width: calc(100% - 60px);
+
+    @media (min-width: 580px) {
+      width: calc(100% - 200px);
+    }
+
+    .form__item {
+      width: 100%;
+
+      @media (min-width: $screen-lg) {
+        width: 300px;
+      }
+    }
+  }
+
+  &__item {
+    flex-shrink: 0;
+  }
+
+  &__item--number {
+    width: 60px;
+  }
+
+  &__item--del {
+    width: 100px;
+    align-self: center;
+    text-align: right;
+    @media (max-width: 580px) {
+      display: none;
+    }
+  }
+
+  &__description {
+    margin-bottom: 70px;
+    font-size: $font-size;
+    line-height: 1.67;
+    text-align: center;
+    color: $color;
+
+    @media (min-width: $screen-md) {
+      font-size: $font-size--big;
+    }
+    @media (min-width: $screen-lg) {
+      padding: 0 90px;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: $font-size;
+    text-transform: uppercase;
+    color: $red;
+  }
+}
+
+
+.form__del {
+  font-size: $font-size;
+  line-height: 2.15;
+  text-transform: uppercase;
+  color: $color;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  &:hover {
+    color: $red;
+    text-decoration: underline;
+  }
+
+  &:active {
+    opacity: .3;
+    text-decoration: none;
+  }
+}
+
+.fieldset {
+  border-style: none;
+  padding-bottom: 25px;
+
+  &--narrow {
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $screen-md) {
+    @include border();
+  }
+}
+
+.form-name {
+
+  &__label {
+    @extend %form__label;
+  }
+
+  &__input {
+    @extend %form__input;
+    width: 100%;
+    @media (min-width: $screen-lg) {
+      width: 300px;
+    }
+  }
+}
+
+.form-app {
+  margin-bottom: 50px;
+  padding-top: 35px;
+  padding-bottom: 10px;
+  background-color: $bg-color;
+
+  @media (min-width: $screen-md) {
+    background-color: $white;
+  }
+
+  &__label {
+    @extend %form__label;
+    @media (min-width: $screen-lg) {
+      width: 240px;
+    }
+  }
+
+  &__input {
+    @extend %form__input;
+  }
+}
+
+.form-time {
+  margin-bottom: 15px;
+
+  &__label {
+    @extend %form__label;
+    margin-left: 0;
+    text-align: center;
+    width: 240px;
+  }
+
+  &__input {
+    @extend %form__input;
+    width: 240px;
+  }
+}
+
+.minus-plus {
+  width: 240px;
+  font-size: 0;
+
+  &--fellow {
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    @extend %form__input;
+    width: calc(100% - 120px);
+    border-left-style: none;
+    border-right-style: none;
+
+    &:hover,
+    &:active {
+      border-left-style: none;
+      border-right-style: none;
+    }
+  }
+
+  &--fellow input {
+    border-style: none;
+
+    &:hover,
+    &:active {
+      border-style: none;
+    }
+
+    &:disabled,
+    &:hover:disabled {
+      border-style: none;
+      background: transparent;
+    }
+  }
+}
+
+
+
+.form-fellow {
+  margin-bottom: 25px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  background-color: $bg-color;
+
+  @media (min-width: $screen-md) {
+    background-color: $white;
+  }
+
+  &__number {
+    font-size: $font-size--big;
+    padding: 10px;
+    line-height: 2;
+    text-align: center;
+    background-color: $bg-color;
+    @include border();
+    border-right-style: none;
+
+    @media (min-width: $screen-md) {
+      @include border();
+    }
+  }
+
+  &__label {
+    @extend %form__label;
+    margin-bottom: 10px;
+    padding-left: 20px;
+  }
+
+  &__input {
+    @extend %form__input;
+  }
+}
+
+.fellow-table {
+  @extend %clearfix;
+
+  &--first {
+    margin-bottom: 30px;
+    padding-top: 30px;
+    border-top: 2px solid $grey;
+  }
+}
+
+.form-achivements {
+  margin-bottom: 30px;
+
+  .form-item:not(:last-child) {
+    margin-right: 20px;
+    @media (min-width: $screen-lg) {
+      flex-basis: 260px;
+    }
+  }
+
+  &__label {
+    @extend %form__label;
+    width: 260px;
+    margin-bottom: 60px;
+    line-height: 1;
+  }
+
+  &__input {
+    @extend %form__input;
+  }
+}
+
+.form-photos {
+  margin-bottom: 65px;
+  padding-top: 20px;
+  background-color: $bg-color;
+
+  @media (min-width: $screen-md) {
+    background-color: $white;
+  }
+
+  &__input {
+    display: none;
+  }
+}
+
+
+
+.uploads-photos {
+  padding-top: 35px;
+  border-top: 2px solid $grey;
+
+  @media (min-width: $screen-md) {
+    padding-top: 70px;
+  }
+
+  &__item {
+    position: relative;
+
+    img {
+      width: 66px;
+      height: 67px;
+      margin-bottom: 10px;
+      margin-left: 20px;
+
+      @media (min-width: $screen-md) {
+        width: 120px;
+        height: 120px;
+        margin-left: 55px;
+      }
+    }
+
+    figcaption {
+      font-size: $font-size--small;
+      margin-bottom: 30px;
+      margin-left: 20px;
+
+      @media (min-width: $screen-md) {
+        margin-left: 55px;
+      }
+    }
+  }
+
+  &__del {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(50%) translateY(-50%);
+    width: 35px;
+    height: 35px;
+    font-size: 0;
+    outline: none;
+    background: $white url($dir-img + "icon_cross.png") no-repeat 50% 50%;
+    @include border($border-radius: 50%);
+
+    @media (min-width: $screen-md) {
+      width: 55px;
+      height: 55px;
+    }
+
+    &:hover {
+      @include border($border-color: $color, $border-radius: 50%);
+      background: $white url($dir-img + "icon_cross--hover.png") no-repeat 50% 50%;
+    }
+
+    &:active {
+      @include border($border-color: $color, $border-radius: 50%);
+      background: $color url($dir-img + "icon_cross--down.png") no-repeat 50% 50%;
+    }
+  }
+}
+
+.form-submit {
+  @extend %clearfix;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,95 @@
+.research {
+  @extend .hidden-element;
+  @extend %clearfix;
+  padding-top: 55px;
+  padding-bottom: 65px;
+  background: $white;
+
+  @media (min-width: $screen-lg) {
+    padding-top: 60px;
+    background: $bg-color;
+  }
+
+  &-item {
+    margin-left: 270px;
+    padding-top: 45px;
+
+    @media (min-width: $screen-lg) {
+      margin-left: 365px;
+      padding-top: 100px;
+    }
+  }
+
+  &__title {
+    width: 170px;
+    margin-bottom: 25px;
+    font-size: ($font-size--big + 1.2);
+    line-height: 1.2;
+    font-weight: $headings-weight;
+    color: $black;
+
+    @media (min-width: 830px) {
+      width: 100%;
+      line-height: 1;
+    }
+  }
+  &__text {
+    @include item-text;
+    margin-bottom: 25px;
+  }
+  &__link {
+    @include item-text;
+    text-decoration: underline;
+    color: $red;
+  }
+}
+
+.timer {
+  position: relative;
+  display: none;
+  float: left;
+
+  @media (min-width: $screen-md) {
+    display: block;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: 310px;
+  }
+
+  &__watch {
+    width: 262px;
+    height: 302px;
+
+    @media (min-width: $screen-lg) {
+      width: 301px;
+      height: 346px;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: 63px;
+    left: 23px;
+    width: 215px;
+    height: 215px;
+    font-size: 118px;
+    font-weight: 700;
+    color: $red;
+    @include border(15px, solid, $red, 50%);
+
+    @media (min-width: $screen-lg) {
+      top: 73px;
+      left: 27px;
+      width: 247px;
+      height: 247px;
+    }
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

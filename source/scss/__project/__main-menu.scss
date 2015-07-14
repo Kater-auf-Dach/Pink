@@ -1,0 +1,103 @@
+.main-menu {
+  position: absolute;
+  top: 74px;
+  left: 0;
+  display: none;
+  width: 100%;
+  font-size: 0;
+  background-color: rgba($color: $color, $alpha: 1);
+
+  @media (min-width: $screen-lg) {
+    position: static;
+    margin-right: -35px;
+    float: right;
+    display: inline-block;
+    width: auto;
+    background-color: transparent;
+  }
+
+  &__link {
+    display: block;
+    font-size: $font-size--big;
+    line-height: ($line-height + 0.4);
+    font-weight: $headings-weight;
+    text-transform: uppercase;
+    text-align: center;
+    color: $white;
+    border-top: 1px solid #485461;
+    border-bottom: 1px solid $black;
+
+    @media (max-width: $screen-lg--max) {
+
+      &:hover {
+        color: $red;
+      }
+
+      &:active {
+        color: rgba($red, .3);
+      }
+    }
+
+    @media (min-width: $screen-lg) {
+      position: relative;
+      display: inline-block;
+      padding: 15px 35px;
+      line-height: 1;
+      font-weight: $headings-weight--light;
+      text-transform: none;
+      border-style: none;
+
+      &:after {
+        content: " ";
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        width: calc(100% - 70px);
+        height: 2px;
+        margin: 0 auto;
+        background: #fff;
+        transform: translate(-50%, -10px);
+        opacity: 0;
+      }
+
+      &:hover:after {
+        opacity: 1;
+      }
+
+      &:active {
+        color: rgba($white, .3);
+      }
+
+      &:active:after {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.main-menu__link {
+  @media (min-width: $screen-lg) {
+
+  }
+}
+
+
+.hamburger {
+  float: right;
+  height: 34px;
+
+  @media (min-width: $screen-md) {
+    transform: translateY(50%);
+  }
+
+  @media (min-width: $screen-lg) {
+    display: none;
+  }
+
+  &:hover path {
+    fill: $red;
+  }
+  &:active path {
+    opacity: .3;
+  }
+}

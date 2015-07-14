@@ -1,0 +1,110 @@
+.page-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $white;
+
+  @media(max-width: 700px) {
+    flex-direction: column;
+  }
+
+  &--index {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+    }
+  }
+
+  &__item {
+    flex-grow: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.page-footer__item:nth-child(1),
+.page-footer__item:nth-child(3) {
+  flex-basis: 160px;
+  @media(max-width: 700px) {
+    flex-grow: 0;
+    flex-basis: auto;
+  }
+
+}
+
+.page-footer__item:nth-child(2) {
+  flex-basis: 180px;
+  margin: 0 60px 40px 60px;
+  @media(max-width: 700px) {
+    flex-grow: 0;
+    flex-basis: auto;
+  }
+}
+
+.page-footer__logo {
+  font-size: 3.4rem;
+  font-weight: $headings-weight--light;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.social-links {
+  font-size: 0;
+  text-align: center;
+  li {
+    display: inline;
+    margin-right: 12px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    @include border(3px, solid, $grey, 50%);
+
+    &:hover {
+      @include border(3px, solid, $color, 50%);
+    }
+    &:active {
+      opacity: .1;
+    }
+  }
+  &__item--tw {
+    background: $white url($dir-img + "twitter.svg") no-repeat 50% 50%;
+  }
+  &__item--fb {
+    background: $white url($dir-img + "facebook.svg") no-repeat 50% 50%;
+  }
+  &__item--yt {
+    background: $white url($dir-img + "youtube.svg") no-repeat 50% 50%;
+  }
+
+}
+
+.develop-by {
+  font-size: $font-size;
+  line-height: 1.3;
+
+  @media (min-width: $screen-lg) {
+    font-size: $font-size--big;
+    line-height: 1;
+  }
+
+}
+
+.logo-academy {
+  vertical-align: middle;
+  margin-left: 15px;
+  fill: $red;
+  &:hover {
+    fill: $black;
+  }
+  &:active {
+    opacity: .3;
+  }
+}

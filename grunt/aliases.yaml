@@ -1,0 +1,30 @@
+default:
+ description: 'Сборка по умолчанию (разработка)'
+ tasks:
+  - prod
+dev:
+ description: 'Сборка для разработки'
+ tasks:
+  - 'jshint'
+  - 'sass:dev'
+  - 'csscomb'
+img:
+ description: 'Работа с изображениями'
+ tasks:
+  - 'concurrent:imgSecond'
+devimg:
+ description: 'Сборка для разработки + работа с изображениями'
+ tasks:
+  - dev
+  - img
+prod:
+ description: 'Сборка продакшна'
+ tasks:
+  - 'concurrent:prodFirst'
+  - 'concurrent:prodSecond'
+  - 'autoprefixer'
+  - 'csscomb'
+# - 'cmq'
+  - 'cssmin'
+  - 'copy'
+  - 'concurrent:imgFirst'

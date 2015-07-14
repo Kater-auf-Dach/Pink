@@ -1,0 +1,26 @@
+@import "__variables";
+@import "__mixins";
+@import "__placeholders";
+@import "__cosmetic";
+
+@import "__base/__base.scss";
+@import "__base/__buttons.scss";
+@import "__base/__fonts.scss";
+@import "__base/__logo.scss";
+@import "__base/__reset.scss";
+@import "__base/__slider.scss";
+@import "__base/__modal.scss";
+
+
+@import "__project/__header.scss";
+@import "__project/__main-menu.scss";
+@import "__project/__features.scss";
+@import "__project/__research.scss";
+@import "__project/__reviews.scss";
+@import "__project/__price.scss";
+@import "__project/__contacts.scss";
+@import "__project/__blog.scss";
+@import "__project/__post.scss";
+@import "__project/__form.scss";
+@import "__project/__pagination.scss";
+@import "__project/__footer.scss";
