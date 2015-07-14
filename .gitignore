@@ -8,6 +8,6 @@ prepros.cfg
 css/*
 .idea/
 .sass-cache/
-bild
+build
 psd
 _anotherGrunt
