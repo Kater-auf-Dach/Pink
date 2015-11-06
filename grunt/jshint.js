@@ -3,6 +3,6 @@ module.exports = {
     reporter: require('jshint-stylish')
   },
   script: [
-    'source/js/*.js'
+    'src/js/*.js'
   ]
 };

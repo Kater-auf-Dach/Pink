@@ -1,4 +1,5 @@
 module.exports = {
+  dist: {
     options: {
       removeComments: true,
       collapseWhitespace: true,
@@ -7,9 +8,10 @@ module.exports = {
       keepClosingSlash: false
     },
     files: {
-        "build/index.html": "source/index.html",
-        "build/blog.html": "source/blog.html",
-        "build/post.html": "source/post.html",
-        "build/form.html": "source/form.html"
+      'build/index.html': 'src/index.html',
+      'build/blog.html': 'src/blog.html',
+      'build/post.html': 'src/post.html',
+      'build/form.html': 'src/form.html'
     }
+  }
 };

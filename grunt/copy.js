@@ -2,15 +2,12 @@ module.exports = {
     build: {
       files: [{
         expand: true,
-        cwd: "source",
+        cwd: 'src',
         src: [
-          "*.html",
-          "scss/**",
-          "js/**",
-          "img/**",
-          "fonts/**"
+          'img/**',
+          'fonts/**'
         ],
-        dest: "build"
+        dest: 'build'
       }]
     }
 };

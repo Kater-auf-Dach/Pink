@@ -1,0 +1,33 @@
+$white: #fff;
+$black: #000;
+$grey: #e5e5e5;
+$red: #d22856;
+$color: #283645;
+$bg-color: #f2f2f2;
+$bg-color-header: #1d2631;
+
+$body-width: 320px;
+
+$html-size-base: 10px;
+$font-size: 1.4rem;
+$font-size--big: 1.8rem;
+$font-size--small: 1.2rem;
+
+$font-size--h1: 2.4rem;
+$font-size--h2: $font-size--big;
+
+$headings-weight: 700;
+$headings-weight--light: 300;
+
+$line-height: 2.4;
+$line-height--small: 1;
+$line-height--big: 3;
+$font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+
+$dir-img: '../img/';
+
+$screen-sm: 320px;
+$screen-md: 480px;
+$screen-lg: 960px;
+$screen-md--max: ($screen-md - 1px);
+$screen-lg--max: ($screen-lg - 1px);

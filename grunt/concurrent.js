@@ -4,16 +4,6 @@ module.exports = {
     limit: 3
   },
 
-/*
-  // Задачи для разработки
-  devFirst: [
-
-  ],
-  devSecond: [
-
-  ],
- */
-
   // Задачи для продакшна
   prodFirst: [
     'clean',
@@ -22,7 +12,7 @@ module.exports = {
   prodSecond: [
     'sass:prod',
     'uglify',
-    'htmlmin'
+    'htmlmin:prod'
   ],
 
   // Задачи по изображениям

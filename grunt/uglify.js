@@ -1,11 +1,7 @@
 module.exports = {
   script: {
     files: [{
-      expand: true,
-      cwd: 'source/js',
-      src: '**/*.js',
-      dest: 'build/js',
-      ext: '.min.js'
+      'build/js/scripts.min.js': ['build/js/scripts.js']
     }]
   }
 };

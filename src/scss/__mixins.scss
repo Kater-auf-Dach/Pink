@@ -1,0 +1,64 @@
+@mixin border($border-width: 2px, $border-style: solid, $border-color: $grey, $border-radius: 2px) {
+  border-width: $border-width;
+  border-style: $border-style;
+  border-color: $border-color;
+  border-radius: $border-radius;
+}
+
+@mixin heading-small {
+  font-size: $font-size--big;
+  font-weight: $headings-weight;
+  line-height: .55;
+  text-align: center;
+  color: $black;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-size--big;
+    line-height: 1.4;
+  }
+  @media (min-width: $screen-lg) {
+    font-size: ($font-size--big + 1.2);
+    line-height: 1;
+  }
+}
+
+@mixin heading-big {
+  font-size: $font-size--h1;
+  font-weight: $headings-weight--light;
+  text-align: center;
+  color: $color;
+}
+
+@mixin item-text {
+  font-size: $font-size;
+  color: $color;
+
+  @media (min-width: $screen-lg) {
+    font-size: ($font-size + .4);
+    line-height: 1.67;
+  }
+}
+
+@mixin media-fonts {
+  @media (min-width: $screen-md) and (max-width: $screen-lg--max) {
+    font-size: ($font-size + 2.6);
+    line-height: normal;
+  }
+  @media (min-width: $screen-lg) {
+    font-size: ($font-size + 3.6);
+    line-height: 1.2;
+  }
+}
+
+@mixin flag {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 74px;
+  height: 74px;
+  content: ' ';
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}

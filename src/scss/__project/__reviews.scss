@@ -1,0 +1,100 @@
+.reviews {
+  position: relative;
+  padding-bottom: 40px;
+  text-align: center;
+  background-color: $white;
+
+  &__arrow {
+    position: absolute;
+    top: 65%;
+    @extend .hidden-element--wide;
+
+    &--left {
+      left: 0;
+    }
+
+    &--right {
+      right: 0;
+    }
+  }
+
+  &__arrow:hover path {
+    fill: #7e868f;
+  }
+
+  &__arrow:active {
+    opacity: .3;
+  }
+
+  &__name {
+    padding-top: 30px;
+    font-size: $font-size--big;
+    font-weight: $headings-weight;
+    line-height: 1.67;
+
+    @media (min-width: $screen-md) {
+      font-size: ($font-size--big + .2);
+      line-height: 1.67;
+      order: 2;
+
+      &:before {
+        position: absolute;
+        top: 72px;
+        left: 46%;
+        content: url($dir-img + "quotes.svg");
+
+        @media (max-width: $screen-lg--max) {
+          display: none;
+        }
+      }
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: ($font-size--big + .6);
+      line-height: 1.5;
+    }
+  }
+
+  &__text {
+    max-width: 780px;
+    margin: 0 auto;
+    font-size: $font-size;
+    line-height: 2.15;
+
+    @media (min-width: $screen-md) {
+      font-size: ($font-size + .4);
+      line-height: 1.67;
+      order: 1;
+    }
+  }
+
+  &__sign {
+    font-size: $font-size;
+    line-height: 2.15;
+    @extend .hidden-element;
+    order: 3;
+
+    @media (min-width: $screen-lg) {
+      font-size: ($font-size + .4);
+      line-height: 1.67;
+    }
+  }
+}
+
+.reviews-item {
+  position: relative;
+  display: none;
+  flex-direction: column;
+
+  @media (min-width: $screen-lg) {
+    padding-top: 185px;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      content: '';
+    }
+  }
+}

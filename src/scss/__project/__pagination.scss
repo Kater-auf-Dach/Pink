@@ -1,0 +1,127 @@
+.pagination {
+  margin-bottom: 90px;
+  font-size: 0;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $white;
+
+  @media(min-width: 480px) {
+    text-align: left;
+  }
+
+  &__list {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__pointer {
+    display: none;
+
+    @media(min-width: 480px) {
+      display: inline-block;
+      vertical-align: middle;
+      width: 60px;
+      margin-bottom: 20px;
+      font-weight: 700;
+
+      @include item-text;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 5px 20px;
+
+    &:first-child,
+    &:nth-child(5n) {
+      margin-left: 0;
+    }
+
+    &:last-child,
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 15px 25px;
+    font-weight: $headings-weight;
+    color: $black;
+    @include item-text;
+    @include border();
+
+    &:hover {
+      @include border($border-color: $color);
+    }
+
+    &:active {
+      @include border($border-color: $red);
+    }
+  }
+
+  &__link--current {
+    @include border($border-color: $red);
+  }
+}
+
+.pagination--post {
+  margin-bottom: 55px;
+  align-items: baseline;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $white;
+
+  @media(min-width: 480px) {
+    margin: 0 60px;
+    margin-bottom: 55px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item:nth-child(1) {
+    min-width: 130px;
+    max-width: 260px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    order: 1;
+
+    @media(min-width: 960px) {
+      margin-right: 0;
+    }
+  }
+  &__item:nth-child(2) {
+    min-width: 130px;
+    max-width: 260px;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    order: 2;
+
+    @media(min-width: 960px) {
+      order: 3;
+    }
+  }
+  &__item:nth-child(3) {
+    min-width: 280px;
+    flex-grow: 1;
+    order: 3;
+
+    @media(min-width: 480px) {
+      margin-bottom: 20px;
+    }
+    @media(min-width: 960px) {
+      order: 2;
+    }
+    @media(min-width: 735px) {
+      margin: 0 20px 20px 20px;
+      order: 2;
+    }
+  }
+}

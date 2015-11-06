@@ -7,21 +7,16 @@ module.exports = {
 
   livereload: {
     options: { livereload: true },
-    files: ['source/*.html']
+    files: ['src/*.html']
   },
 
   scripts: {
-    files: ['source/js/*.js'],
+    files: ['src/js/*.js'],
     tasks: ['jshint']
   },
 
   styles: {
-    files: ['source/scss/**/*.scss'],
+    files: ['src/scss/**/*.scss'],
     tasks: ['sass:dev']
-  },
-
-  imagemin: {
-    files: ['source/img/**/*.{png,jpg,gif}'],
-    tasks: ['imagemin']
   }
 };

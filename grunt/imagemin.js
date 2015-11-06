@@ -5,16 +5,16 @@ module.exports = {
         },
         files: [{
             expand: true,
-            src: ["source/img/**/*.{png,jpg,gif,svg}"]
+            src: ['src/img/**/*.{png,jpg,gif,svg}']
         }]
     },
-    prod: {
+    dist: {
         option: {
             optimizationLevel: 3
         },
         files: [{
             expand: true,
-            src: ["build/img/**/*.{png,jpg,gif,svg}"]
+            src: ['build/img/**/*.{png,jpg,gif,svg}']
         }]
     }
 };

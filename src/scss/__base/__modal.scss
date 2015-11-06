@@ -1,0 +1,80 @@
+.modal {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: none;
+  width: 320px;
+  transform: translateX(-50%);
+  text-align: center;
+  border-radius: 2px;
+  background-color: $white;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, .75);
+
+  @media (min-width: $screen-md) {
+    width: 460px;
+  }
+
+  &--show {
+    display: block;
+  }
+
+  &--failure {
+    top: 1700px;
+  }
+
+  &--success {
+    top: 2160px;
+    @media (min-width: $screen-lg) {
+      width: 780px;
+    }
+  }
+
+  &__wrapper {
+    width: 280px;
+    margin: 0 auto;
+
+    @media (min-width: $screen-md) {
+      width: 300px;
+    }
+  }
+
+  &__wrapper--wide {
+    @media (min-width: $screen-lg) {
+      width: 460px;
+    }
+  }
+
+  &__message {
+    padding: 45px 0;
+  }
+
+  &__title {
+    font-size: $font-size--big;
+    line-height: 1.4;
+    margin-bottom: 35px;
+
+    @media (min-width: $screen-md) {
+      font-size: ($font-size--big + 1.2);
+      line-height: 1.33;
+    }
+  }
+
+  &__text {
+    font-size: $font-size;
+    line-height: 1.72;
+
+    @media (min-width: $screen-md) {
+      font-size: $font-size--big;
+      line-height: 1.4;
+    }
+  }
+
+  &__btn {
+    padding-bottom: 50px;
+  }
+
+  &__btn--wide {
+    padding: 50px 0;
+    background-color: $bg-color;
+  }
+}

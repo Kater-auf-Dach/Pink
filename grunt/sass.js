@@ -1,20 +1,13 @@
 module.exports = {
-  // Настройки для разработки
   dev: {
-    options: {
-      sourcemap: true
-    },
     files:{
-      'source/css/style.css': ['source/scss/style.scss']
+      'src/css/style.css': ['src/scss/style.scss']
     }
   },
-  // Настройки для продакшна
-  prod: {
-    options: {
-      sourceMap: false
-    },
+
+  dist: {
     files:{
-      'build/css/style.css': ['source/scss/style.scss']
+      'build/css/style.css': ['src/scss/style.scss']
     }
   }
 };

@@ -1,0 +1,85 @@
+.contacts {
+  position: relative;
+  padding-top: 65px;
+  padding-bottom: 30px;
+  text-align: center;
+  background-color: $white;
+
+  &__flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__item {
+    flex-basis: 280px;
+    flex-shrink: 0;
+
+    @media (min-width: $screen-md) {
+      flex-basis: 300px;
+    }
+  }
+
+  &__item:nth-child(2) {
+    @media (min-width: $screen-lg) {
+      order: 3;
+    }
+  }
+
+  &__item:nth-child(3) {
+    @media (min-width: $screen-lg) {
+      order: 2;
+    }
+  }
+
+  &__title {
+    margin-bottom: 55px;
+    @include heading-big;
+    @include media-fonts;
+  }
+
+  &__text {
+    margin-bottom: 15px;
+    font-size: $font-size--big;
+    line-height: 1.7;
+    font-weight: $headings-weight;
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 20px;
+    font-size: $font-size--h1;
+    line-height: normal;
+    color: $red;
+
+    &--mail:hover {
+      color: $color;
+      text-decoration: underline;
+    }
+    &--mail:active {
+      opacity: 0.3;
+      text-decoration: none;
+    }
+  }
+}
+
+.map-index {
+  position: relative;
+  height: 200px;
+  background: url($dir-img + "map--big.jpg") no-repeat 50% 100%;
+  background-size: cover;
+
+  @media (min-width: $screen-md) {
+    height: 380px;
+    margin-bottom: 75px;
+  }
+
+  @media (min-width: $screen-lg) {
+    height: 525px;
+  }
+}
+
+.map {
+  width: 100%;
+  min-height: 100%;
+}

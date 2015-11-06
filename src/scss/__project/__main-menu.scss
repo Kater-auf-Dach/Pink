@@ -1,0 +1,101 @@
+.main-menu {
+  position: absolute;
+  top: 74px;
+  left: 0;
+  display: none;
+  width: 100%;
+  font-size: 0;
+  background-color: rgba($color: $color, $alpha: 1);
+
+  @media (min-width: $screen-lg) {
+    position: static;
+    display: inline-block;
+    float: right;
+    width: auto;
+    margin-right: -35px;
+    background-color: transparent;
+  }
+
+  &__link {
+    display: block;
+    padding: 20px 0;
+    font-size: $font-size--big;
+    font-weight: $headings-weight;
+    line-height: ($line-height + .4);
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    border-top: 1px solid #485461;
+    border-bottom: 1px solid $black;
+
+    @media (max-width: $screen-lg--max) {
+      &:hover {
+        color: $red;
+      }
+
+      &:active {
+        color: rgba($red, .3);
+      }
+    }
+
+    @media (min-width: $screen-lg) {
+      position: relative;
+      display: inline-block;
+      padding: 15px 35px;
+      font-weight: $headings-weight--light;
+      line-height: 1;
+      text-transform: none;
+      border-style: none;
+
+      &:after {
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        width: calc(100% - 70px);
+        height: 2px;
+        margin: 0 auto;
+        content: ' ';
+        transform: translate(-50%, -10px);
+        opacity: 0;
+        background: #fff;
+      }
+
+      &:hover:after {
+        opacity: 1;
+      }
+
+      &:active {
+        color: rgba($white, .3);
+      }
+
+      &:active:after {
+        opacity: 0;
+      }
+    }
+  }
+
+  &--show {
+    display: block;
+    z-index: 1;
+  }
+}
+
+.hamburger {
+  float: right;
+  height: 34px;
+
+  @media (min-width: $screen-md) {
+    transform: translateY(50%);
+  }
+
+  @media (min-width: $screen-lg) {
+    display: none;
+  }
+
+  &:hover path {
+    fill: $red;
+  }
+  &:active path {
+    opacity: .3;
+  }
+}

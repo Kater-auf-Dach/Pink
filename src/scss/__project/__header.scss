@@ -1,0 +1,139 @@
+.page-header {
+  color: $white;
+  background: url($dir-img + "background-mobile@1x.jpg") no-repeat 50% 50% $bg-color-header;
+  background-size: cover;
+
+  @media (min-width: $screen-md) {
+    background: url($dir-img + "background-tablet@1x.jpg") no-repeat 50% 50% $bg-color-header;
+    background-size: cover;
+  }
+
+  @media (min-width: $screen-lg) {
+    background: url($dir-img + "background-fullsize.jpg") no-repeat 50% 50% $bg-color-header;
+    background-size: cover;
+  }
+
+  &--index {
+    position: relative;
+    margin-bottom: 340px;
+    background: url($dir-img + "iphone-hand-mobile.png") no-repeat 30% 100%,
+    url($dir-img + "background-mobile@1x.jpg") no-repeat 50% 50% $bg-color-header;
+    background-size: auto, cover;
+
+    @media (min-resolution: 1.5dppx) {
+      background: url($dir-img + "iphone-hand-mobile@2x.png") no-repeat 30% 100% contain,
+      url($dir-img + "background-mobile@2x.jpg")no-repeat 50% 50% $bg-color-header;
+    }
+
+    @media (min-resolution: 2dppx) {
+      background: url($dir-img + "iphone-hand-mobile@3x.png") no-repeat 80% 100% contain,
+      url($dir-img + "background-mobile@3x.jpg") no-repeat 50% 50% $bg-color-header;
+    }
+
+    @media (min-width: $screen-md) {
+      position: static;
+      margin-bottom: 0;
+      background: url($dir-img + "iphone-hand-tablet@1x.png") no-repeat 80% 100%,
+      url($dir-img + "background-tablet@1x.jpg") no-repeat 50% 50% $bg-color-header;
+
+      @media (min-resolution: 1.5dppx) {
+        background: url($dir-img + "iphone-hand-tablet@2x.png") no-repeat 80% 100% contain,
+        url($dir-img + "background-tablet@2x.jpg") no-repeat 50% 50% $bg-color-header;
+      }
+    }
+
+    @media (min-width: $screen-lg) {
+      background: url($dir-img + "iphone-hand-desktop@1x.png") no-repeat 58% 100% cover,
+      url($dir-img + "background-fullsize.jpg") no-repeat 50% 50% $bg-color-header;
+      background-size: auto, cover;
+
+      @media (min-resolution: 1.5dppx) {
+        background: url($dir-img + "iphone-hand-desktop@2x.png") no-repeat 58% 100% contain,
+        url($dir-img + "background-fullsize.jpg") no-repeat 50% 50% $bg-color-header;
+        background-size: auto, cover;
+      }
+    }
+  }
+
+  &__top-bar {
+    @extend %clearfix;
+    position: relative;
+    padding: 20px 0;
+    color: $white;
+    line-height: $line-height--small;
+    // background: $color; // для активного меню
+    background: rgba($color: $black, $alpha: .3);
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 40px;
+    }
+  }
+
+  &__logo {
+    float: left;
+  }
+}
+
+.page-title {
+  @include heading-big;
+  max-width: 720px;
+  margin: 25px auto 55px;
+  padding-bottom: 320px;
+  line-height: normal;
+  color: $white;
+  @include media-fonts;
+
+  @media (min-width: $screen-md) {
+    margin-top: 0;
+    padding-top: 100px;
+    padding-bottom: 0;
+  }
+
+  &--inner {
+    padding: 60px 0 100px;
+    text-align: center;
+  }
+}
+
+.get-app {
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 35px;
+  font-size: $font-size;
+  line-height: 1.72;
+  font-weight: $headings-weight--light;
+  text-align: center;
+  background-color: #1d2631;
+  color: $white;
+
+  position: absolute;
+  bottom: -70%;
+  width: 100%;
+
+  @media (min-width: $screen-md) {
+    position: static;
+    padding-top: 0;
+    font-size: $font-size--big;
+    line-height: 1.4;
+    background-color: transparent;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-bottom: 110px;
+  }
+
+  &__inner {
+    margin-bottom: 50px;
+  }
+
+  &__img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 35px;
+    padding-bottom: 10px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

@@ -1,30 +1,53 @@
 default:
- description: 'Сборка по умолчанию (разработка)'
+ description: 'Сборка по умолчанию (продакшн)'
  tasks:
-  - prod
+  - dist
+
 dev:
  description: 'Сборка для разработки'
  tasks:
-  - 'jshint'
   - 'sass:dev'
-  - 'csscomb'
+  - 'jshint'
+  - 'concat'
+  - 'browserSync:dev'
+  - 'watch'
 img:
  description: 'Работа с изображениями'
  tasks:
-  - 'concurrent:imgSecond'
+  - 'imagemin:dev'
 devimg:
  description: 'Сборка для разработки + работа с изображениями'
  tasks:
   - dev
   - img
-prod:
+
+distimg:
  description: 'Сборка продакшна'
  tasks:
-  - 'concurrent:prodFirst'
-  - 'concurrent:prodSecond'
+  - 'clean'
+  - 'htmlmin:dist'
+  - 'sass:dist'
+  - 'concat'
   - 'autoprefixer'
-  - 'csscomb'
-# - 'cmq'
   - 'cssmin'
+  - 'uglify'
   - 'copy'
-  - 'concurrent:imgFirst'
+  - 'imagemin:dist'
+
+dist:
+ description: 'Сборка продакшна'
+ tasks:
+  - 'clean'
+  - 'htmlmin:dist'
+  - 'sass:dist'
+  - 'concat'
+  - 'autoprefixer'
+  - 'cssmin'
+  - 'uglify'
+  - 'copy'
+
+pages:
+ description: 'Сборка продакшн-версии и публикация на GitHub Pages'
+ tasks:
+  - distimg
+  - 'gh-pages'

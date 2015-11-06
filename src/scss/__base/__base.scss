@@ -1,0 +1,81 @@
+html {
+  font-size: $html-size-base;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: $body-width;
+  margin: 0 auto;
+  font-family: $font-family;
+  font-size: $font-size;
+  color: $color;
+  background-color: $white;
+
+  @media (min-width: 460px) {
+    font-size: ($font-size + .4);
+  }
+}
+
+.wrapper {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: $screen-lg) {
+    padding: 0 10px;
+  }
+
+  &--header {
+    width: 280px;
+    margin: 0 auto;
+
+    @media (min-width: $screen-md) {
+      width: 300px;
+      margin: 0;
+    }
+  }
+
+  &--inner {
+    @media (min-width: $screen-md) {
+      padding: 0 58px;
+    }
+  }
+}
+
+.hidden-element {
+  @media (max-width: $screen-md--max) {
+    display: none;
+  }
+
+  &--wide {
+    @media (max-width: $screen-lg--max) {
+      display: none;
+    }
+  }
+
+  &--narrow {
+    display: inline;
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+}
+
+.triangle {
+  position: absolute;
+  left: 0;
+
+  &--price {
+    top: 0;
+  }
+
+  &--footer {
+    z-index: 5;
+  }
+}
+
+.flag {
+  position: relative;
+}

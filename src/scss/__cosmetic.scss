@@ -1,0 +1,20 @@
+.flag--hit:before {
+  background-image: url($dir-img + "icon_flag_hit.png");
+  @include flag;
+}
+
+.footnote {
+  margin-bottom: 60px;
+  font-size: $font-size;
+  line-height: 4;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $screen-md) {
+    float: right;
+  }
+
+  .asterisk {
+    color: $red;
+  }
+}
