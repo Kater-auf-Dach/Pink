@@ -22,6 +22,16 @@
     }
   }
 
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    @media (min-width: $screen-lg) {
+      align-items: stretch;
+    }
+  }
+
 
   &__top-bar {
     @extend %clearfix;
@@ -95,13 +105,13 @@
 
   @media (min-width: $screen-md) {
     position: static;
+
     font-size: $font-size--big;
     line-height: 1.4;
     background-color: transparent;
   }
 
   @media (min-width: $screen-lg) {
-    padding-top: 60px;
     padding-bottom: 110px;
   }
 

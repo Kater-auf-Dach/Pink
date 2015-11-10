@@ -1,13 +1,3 @@
-.top {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-
-  @media (min-width: $screen-lg) {
-    align-items: stretch;
-  }
-}
-
 .main-menu {
   position: absolute;
   top: 80px;
@@ -87,10 +77,10 @@
   }
 
   &--show {
-    margin-left: 0;
+    margin-right: 0;
     border-top: 1px solid #000;
     opacity: 1;
-    transition: opacity margin-left .5s;
+    transition: opacity margin-right .5s;
   }
 }
 
