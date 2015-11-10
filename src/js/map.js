@@ -1,7 +1,9 @@
 function initMap() {
   var mapOptions = {
     zoom: 16,
-    disableDefaultUI:true,
+    disableDefaultUI: true,
+    scrollwheel: false,
+    draggable: false,
     center: new google.maps.LatLng(59.936352,30.321097)
   };
 

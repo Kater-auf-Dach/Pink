@@ -1,36 +1,41 @@
-.logo--mobile {
-  display: none;
-
-  @media (max-width: $screen-md--max) {
-    display: block;
-  }
-}
-
-.logo--tablet {
-  display: none;
-
-  @media (min-width: $screen-md) and (max-width: $screen-lg--max) {
-    display: block;
-  }
-}
-
-.logo--bottom.logo--tablet {
-  @media (max-width: $screen-lg--max) {
-    display: block;
-  }
-}
-
-.logo--desktop {
-  display: none;
-
-  @media (min-width: $screen-lg) {
-    display: block;
-  }
-}
-
 .logo {
   &:hover path {
     fill: #d22856;
+  }
+
+  &--mobile {
+    display: none;
+    @media (max-width: $screen-md--max) {
+      display: block;
+    }
+  }
+
+  &--desktop {
+    display: none;
+    @media (min-width: $screen-md) {
+      display: block;
+    }
+  }
+
+  &__star {
+    display: none;
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
+  }
+
+  &__glass--tablet {
+    display: none;
+    @media (min-width: $screen-md) and (max-width: $screen-lg--max) {
+      display: block;
+    }
+  }
+
+  &__glass--desktop {
+    display: none;
+    @media (min-width: $screen-lg--max) {
+      display: block;
+    }
   }
 
   &--top:active path {
@@ -41,7 +46,8 @@
     fill: rgba(210, 40, 86, .3);
   }
 
-  &--bottom:active .logo__text path {
+  &--bottom:active .logo__text path,
+  &--bottom:active .logo__star path {
     fill: rgba(40, 54, 69, .3);
   }
 }
