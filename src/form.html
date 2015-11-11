@@ -208,17 +208,17 @@
           <div class="wrapper--inner">
             <div class="form__flex">
               <div class="form__item  form__item--narrow">
-                <input class="form-time__input" type="text" placeholder="1 апреля 2015">
+                <input class="form-time__input" type="text" value="1 апреля 2015">
                 <label class="form-time__label">Дата выезда</label>
               </div>
               <div class=" form__item  form__item--narrow  minus-plus">
                 <button class="btn  minus-plus__btn  minus-plus__btn--minus" type="button" id="minus-d">-</button>
-                <input class="minus-plus__input  input--short" type="text" placeholder="10 дней">
+                <input class="minus-plus__input  input--short" type="number" placeholder="10 дней">
                 <button class="btn  minus-plus__btn  minus-plus__btn--plus" type="button" id="plus-d">+</button>
                 <label class="form-time__label">Продолжительность</label>
               </div>
               <div class="form__item  form__item--narrow">
-                <input class="form-time__input" type="text" placeholder="1 апреля 2015" disabled>
+                <input class="form-time__input" type="text" value="1 апреля 2015" disabled>
                 <label class="form-time__label">Дата возвращения</label>
               </div>
             </div>
@@ -238,7 +238,7 @@
           <div class="wrapper--inner">
             <div class="minus-plus  minus-plus--fellow">
               <button type="button" class="btn  minus-plus__btn  minus-plus__btn--minus" id="minus-q">-</button>
-              <input class="minus-plus__input" type="text" value="2" disabled>
+              <input class="minus-plus__input" type="number" value="2" disabled>
               <button type="button" class="btn  minus-plus__btn  minus-plus__btn--plus" id="plus-q">+</button>
             </div>
 
@@ -299,21 +299,21 @@
           <div class="wrapper--inner">
             <div class="form__flex">
               <div class="form__item">
-                <input class="form-achivements__input" type="checkbox" name="achiv" id="achiv1" checked>
+                <input class="form-achivements__input" type="checkbox" name="achivements" value="shark" id="achiv1" checked>
                 <label class="form-achivements__label" for="achiv1">Сделал селфи с акулой</label>
-                <input class="form-achivements__input" type="checkbox" name="achiv" id="achiv2" checked>
+                <input class="form-achivements__input" type="checkbox" name="achivements" value="beach" id="achiv2" checked>
                 <label class="form-achivements__label" for="achiv2">Обгорел на пляже</label>
               </div>
               <div class="form__item">
-                <input class="form-achivements__input" type="checkbox" name="achiv" id="achiv3">
+                <input class="form-achivements__input" type="checkbox" name="achivements" value="Chack" id="achiv3">
                 <label class="form-achivements__label" for="achiv3">Видел Чака Норриса</label>
-                <input class="form-achivements__input" type="checkbox" name="achiv" id="achiv4">
+                <input class="form-achivements__input" type="checkbox" name="achivements" value="souvenirs" id="achiv4">
                 <label class="form-achivements__label" for="achiv4">Накупил сувениров</label>
               </div>
               <div class="form__item">
-                <input class="form-achivements__input" type="checkbox" name="achiv" id="achiv5" checked>
+                <input class="form-achivements__input" type="checkbox" name="achivements" value="town" id="achiv5" checked>
                 <label class="form-achivements__label" for="achiv5">Удержал башню</label>
-                <input class="form-achivements__input" type="checkbox" name="achiv" id="achiv6">
+                <input class="form-achivements__input" type="checkbox" name="achivements" value="hotel" id="achiv6">
                 <label class="form-achivements__label" for="achiv6">Разгромил отель</label>
               </div>
             </div>
@@ -536,7 +536,7 @@
   </div>
 </div>
 
- <script src="js/script.js"></script>
+<script src="js/scripts.min.js"></script>
 </body>
 
 </html>
