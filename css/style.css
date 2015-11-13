@@ -753,6 +753,8 @@ a {
           color: rgba(255, 255, 255, 0.3); }
         .main-menu__link:active:after {
           opacity: 0; } }
+    .main-menu__link--active:after {
+      opacity: 1; }
   .main-menu--show {
     top: 80px;
     border-top: 1px solid #000;
